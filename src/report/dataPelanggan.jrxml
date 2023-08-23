@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 4.5.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="dataPelanggan" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM pelanggan]]>
+	</queryString>
+	<field name="nik" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="nik"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pelanggan"/>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="nama"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pelanggan"/>
+	</field>
+	<field name="alamat" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="alamat"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pelanggan"/>
+	</field>
+	<field name="telp" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="telp"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pelanggan"/>
+	</field>
+	<field name="email" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="email"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pelanggan"/>
+	</field>
+	<field name="foto_ktp" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="foto_ktp"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pelanggan"/>
+	</field>
+	<group name="nik">
+		<groupExpression><![CDATA[$F{nik}]]></groupExpression>
+	</group>
+	<group name="nama">
+		<groupExpression><![CDATA[$F{nama}]]></groupExpression>
+	</group>
+	<group name="alamat">
+		<groupExpression><![CDATA[$F{alamat}]]></groupExpression>
+	</group>
+	<group name="telp">
+		<groupExpression><![CDATA[$F{telp}]]></groupExpression>
+	</group>
+	<group name="email">
+		<groupExpression><![CDATA[$F{email}]]></groupExpression>
+	</group>
+	<group name="foto_ktp">
+		<groupExpression><![CDATA[$F{foto_ktp}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="83" splitType="Stretch">
+			<staticText>
+				<reportElement x="285" y="48" width="262" height="30" forecolor="#020138"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Phone : (021) 79182997, 0899-5395-345, 0858-8275-9455]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="301" y="34" width="247" height="30" forecolor="#020138"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Jl. Mampang Prapatan V No. 70 Jakarta Selatan 12790]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="507" y="20" width="45" height="14" forecolor="#020138"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Rent Car]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="389" y="63" width="162" height="16" forecolor="#020138"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Email : regulatorrent70@gmail.com]]></text>
+			</staticText>
+			<image>
+				<reportElement x="9" y="4" width="200" height="69"/>
+				<imageExpression><![CDATA["E:/Bambang/RegulatorRentCar/src/Icon/logo regulator1.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="26" y="65" width="164" height="14" forecolor="#020138"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[The Reliable Transportation]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="438" y="1" width="118" height="30" forecolor="#020138"/>
+				<textElement>
+					<font fontName="Serif" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REGULATORS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="31" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="554" height="1" forecolor="#020138"/>
+			</line>
+			<line>
+				<reportElement x="1" y="30" width="554" height="1" forecolor="#020138"/>
+			</line>
+			<staticText>
+				<reportElement mode="Transparent" x="160" y="4" width="240" height="27" forecolor="#020138"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DATA PELANGGAN]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="26" y="-1" width="100" height="28">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ad85bbb8-527c-480b-b3fa-5ac44201ce45"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="126" y="-1" width="96" height="28">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dd27beff-275e-4cab-9e8d-f9bad37917d6"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="223" y="0" width="137" height="28">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8755fb8f-98d7-4cd8-870a-2cefb1b51db8"/>
+				</reportElement>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="-1" width="88" height="28">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="63939180-3883-4eec-b7ba-a6a01b1241c8"/>
+				</reportElement>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. Telpon]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="-1" width="106" height="28">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0d079b15-ecac-4c56-b94e-d6fe2af8a23b"/>
+				</reportElement>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="-1" width="25" height="28">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="882ff5f5-7782-47bf-bbb3-a5df6753ffdc"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. ]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<line>
+				<reportElement x="1" y="-1" width="554" height="1" forecolor="#020138"/>
+			</line>
+			<textField>
+				<reportElement x="26" y="-1" width="100" height="30" forecolor="#000000">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ad85bbb8-527c-480b-b3fa-5ac44201ce45"/>
+				</reportElement>
+				<textElement>
+					<font fontName="SansSerif" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nik}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="126" y="-1" width="96" height="30" forecolor="#000000">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dd27beff-275e-4cab-9e8d-f9bad37917d6"/>
+				</reportElement>
+				<textElement>
+					<font fontName="SansSerif" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="223" y="-1" width="137" height="30" forecolor="#000000">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8755fb8f-98d7-4cd8-870a-2cefb1b51db8"/>
+				</reportElement>
+				<textElement>
+					<font fontName="SansSerif" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="362" y="-1" width="88" height="30" forecolor="#000000">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="63939180-3883-4eec-b7ba-a6a01b1241c8"/>
+				</reportElement>
+				<textElement>
+					<font fontName="SansSerif" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="-1" width="106" height="30" forecolor="#000000">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0d079b15-ecac-4c56-b94e-d6fe2af8a23b"/>
+				</reportElement>
+				<textElement>
+					<font fontName="SansSerif" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="-1" width="24" height="30" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{COLUMN_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="116" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="47" y="80" width="104" height="16" forecolor="#020138"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tri Gutomo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="391" y="2" width="73" height="16" forecolor="#020138"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Jakarta,]]></text>
+			</staticText>
+			<textField pattern="dd MMMM yyyy">
+				<reportElement mode="Opaque" x="437" y="2" width="115" height="17" forecolor="#020138"/>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="60" y="94" width="73" height="16" forecolor="#020138"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pemilik]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="65" y="18" width="70" height="16" forecolor="#020138"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Mengetahui,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="401" y="80" width="104" height="16" forecolor="#020138"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="414" y="94" width="73" height="16" forecolor="#020138"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Admin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="419" y="18" width="70" height="16" forecolor="#020138"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Mengetahui,]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

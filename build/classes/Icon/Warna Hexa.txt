@@ -1,0 +1,7 @@
+Combo Tiga Warna
+Hijau = #004743   = 0, 71, 67
+Tosca = #ABD0C6   = 171, 208, 198
+Kuning= #F9BC61   = 249, 188, 97
+
+Warna RGB
+Tosca lain = 98,215,196

@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 4.5.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="buktiPembayaran" pageWidth="595" pageHeight="395" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.unit." value="cm"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="cm"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<parameter name="IdTransaksi" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT * from pinjam INNER JOIN pelanggan ON pelanggan.nik = pinjam.nik INNER JOIN mobil ON mobil.no_plat=pinjam.no_plat WHERE status_transaksi='Selesai' AND id_transaksi= $P{IdTransaksi}]]>
+	</queryString>
+	<field name="id_transaksi" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="id_transaksi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pinjam"/>
+	</field>
+	<field name="nik" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="nik"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pinjam"/>
+	</field>
+	<field name="no_plat" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="no_plat"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pinjam"/>
+	</field>
+	<field name="tgl_pinjam" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="tgl_pinjam"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pinjam"/>
+	</field>
+	<field name="tgl_kembali" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="tgl_kembali"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pinjam"/>
+	</field>
+	<field name="lama_pinjam" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="lama_pinjam"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pinjam"/>
+	</field>
+	<field name="total" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="total"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pinjam"/>
+	</field>
+	<field name="bayar" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="bayar"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pinjam"/>
+	</field>
+	<field name="overtime" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="overtime"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pinjam"/>
+	</field>
+	<field name="denda" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="denda"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pinjam"/>
+	</field>
+	<field name="id_supir" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="id_supir"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pinjam"/>
+	</field>
+	<field name="status_transaksi" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="status_transaksi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pinjam"/>
+	</field>
+	<field name="COLUMN_13" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="nik"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pelanggan"/>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="nama"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pelanggan"/>
+	</field>
+	<field name="alamat" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="alamat"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pelanggan"/>
+	</field>
+	<field name="telp" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="telp"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pelanggan"/>
+	</field>
+	<field name="email" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="email"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pelanggan"/>
+	</field>
+	<field name="foto_ktp" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="foto_ktp"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pelanggan"/>
+	</field>
+	<field name="COLUMN_19" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="no_plat"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="mobil"/>
+	</field>
+	<field name="merk" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="merk"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="mobil"/>
+	</field>
+	<field name="type" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="type"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="mobil"/>
+	</field>
+	<field name="tahun" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="tahun"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="mobil"/>
+	</field>
+	<field name="jumlah_penumpang" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="jumlah_penumpang"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="mobil"/>
+	</field>
+	<field name="kekuatan_mesin" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="kekuatan_mesin"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="mobil"/>
+	</field>
+	<field name="konsumsi_bbm" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="konsumsi_bbm"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="mobil"/>
+	</field>
+	<field name="kecepatan_maksimum" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="kecepatan_maksimum"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="mobil"/>
+	</field>
+	<field name="transmisi" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="transmisi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="mobil"/>
+	</field>
+	<field name="harga" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="harga"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="mobil"/>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="mobil"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="81" splitType="Stretch">
+			<staticText>
+				<reportElement x="389" y="63" width="162" height="16" forecolor="#020138"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Email : regulatorrent70@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="301" y="34" width="247" height="30" forecolor="#020138"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Jl. Mampang Prapatan V No. 70 Jakarta Selatan 12790]]></text>
+			</staticText>
+			<image>
+				<reportElement x="9" y="4" width="200" height="69"/>
+				<imageExpression><![CDATA["E:/Bambang/RegulatorRentCar/src/Icon/logo regulator1.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="26" y="65" width="164" height="14" forecolor="#020138"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[The Reliable Transportation]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="438" y="1" width="118" height="30" forecolor="#020138"/>
+				<textElement>
+					<font fontName="Serif" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REGULATORS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="507" y="20" width="45" height="14" forecolor="#020138"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Rent Car]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="285" y="48" width="262" height="30" forecolor="#020138"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Phone : (021) 79182997, 0899-5395-345, 0858-8275-9455]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="185" splitType="Stretch">
+			<staticText>
+				<reportElement x="204" y="0" width="151" height="27" forecolor="#020138"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BUKTI PEMBAYARAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="11" width="48" height="16" forecolor="#020138"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="11" width="10" height="16" forecolor="#020138"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="404" y="11" width="48" height="16" forecolor="#020138"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Jakarta,]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="48" y="11" width="100" height="16" forecolor="#000000"/>
+				<textElement>
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="1" y="30" width="1" height="152" forecolor="#020138"/>
+			</line>
+			<line>
+				<reportElement x="0" y="30" width="554" height="1" forecolor="#020138"/>
+			</line>
+			<staticText>
+				<reportElement x="2" y="31" width="551" height="17" forecolor="#020138"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ No.		       		KETERANGAN KENDARAAN			        JUMLAH]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="48" width="554" height="1" forecolor="#020138"/>
+			</line>
+			<line>
+				<reportElement x="29" y="29" width="1" height="152" forecolor="#020138"/>
+			</line>
+			<staticText>
+				<reportElement x="9" y="51" width="194" height="16" forecolor="#020138"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[1.     MERK / TYPE KENDARAAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="68" width="194" height="16" forecolor="#020138"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[2.     NO POLISI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="85" width="194" height="16" forecolor="#020138"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[3.     TANGGAL MULAI SEWA ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="101" width="194" height="16" forecolor="#020138"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[4.     TANGGAL KEMBALI SEWA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="117" width="194" height="16" forecolor="#020138"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[5.     HARGA SEWA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="133" width="194" height="16" forecolor="#020138"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[6.     OVERTIME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="149" width="180" height="16" forecolor="#020138"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[7.     DENDA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="203" y="51" width="10" height="16" forecolor="#020138"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="203" y="68" width="10" height="16" forecolor="#020138"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="203" y="85" width="10" height="16" forecolor="#020138"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="203" y="101" width="10" height="16" forecolor="#020138"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="203" y="117" width="10" height="16" forecolor="#020138"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="203" y="133" width="10" height="16" forecolor="#020138"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="433" y="30" width="1" height="151" forecolor="#020138"/>
+			</line>
+			<line>
+				<reportElement x="555" y="30" width="1" height="152" forecolor="#020138"/>
+			</line>
+			<line>
+				<reportElement x="0" y="67" width="554" height="1" forecolor="#020138"/>
+			</line>
+			<line>
+				<reportElement x="0" y="84" width="554" height="1" forecolor="#020138"/>
+			</line>
+			<line>
+				<reportElement x="-1" y="100" width="554" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="117" width="554" height="1" forecolor="#020138"/>
+			</line>
+			<line>
+				<reportElement x="0" y="133" width="554" height="1" forecolor="#020138"/>
+			</line>
+			<line>
+				<reportElement x="1" y="149" width="554" height="1" forecolor="#020138"/>
+			</line>
+			<line>
+				<reportElement x="0" y="164" width="554" height="1" forecolor="#020138"/>
+			</line>
+			<staticText>
+				<reportElement x="439" y="117" width="26" height="16" forecolor="#020138"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Rp. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="439" y="133" width="26" height="16" forecolor="#020138"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Rp. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="439" y="149" width="26" height="16" forecolor="#020138"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Rp. ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="208" y="51" width="70" height="17" forecolor="#000000"/>
+				<textElement>
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{merk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="51" width="82" height="17" forecolor="#000000"/>
+				<textElement>
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="208" y="68" width="100" height="17" forecolor="#000000"/>
+				<textElement>
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{no_plat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="208" y="85" width="185" height="16" forecolor="#000000"/>
+				<textElement>
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tgl_pinjam}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="209" y="101" width="185" height="16" forecolor="#000000"/>
+				<textElement>
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tgl_kembali}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="209" y="118" width="69" height="16" forecolor="#000000"/>
+				<textElement>
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{harga}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="209" y="134" width="100" height="16" forecolor="#000000"/>
+				<textElement>
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{overtime}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd MMMM yyyy">
+				<reportElement mode="Opaque" x="445" y="11" width="107" height="17" forecolor="#020138"/>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="273" y="118" width="90" height="16" forecolor="#020138"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[x]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Transparent" x="285" y="119" width="100" height="16" forecolor="#000000"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lama_pinjam}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="181" width="554" height="1" forecolor="#020138"/>
+			</line>
+			<staticText>
+				<reportElement x="213" y="166" width="194" height="16" forecolor="#020138"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="439" y="166" width="26" height="16" forecolor="#020138"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Rp. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="202" y="149" width="10" height="16" forecolor="#020138"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="209" y="149" width="100" height="16" forecolor="#000000"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{denda}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="465" y="164" width="88" height="16" forecolor="#000000"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<pageFooter>
+		<band height="89" splitType="Stretch">
+			<staticText>
+				<reportElement x="48" y="72" width="70" height="16" forecolor="#020138"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pelanggan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="402" y="61" width="104" height="16" forecolor="#020138"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="418" y="72" width="70" height="16" forecolor="#020138"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Admin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="50" y="15" width="73" height="16" forecolor="#020138"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Mengetahui,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="401" y="16" width="114" height="16" forecolor="#020138"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Regulator Rent Car,]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="33" y="58" width="100" height="20" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-1" y="2" width="298" height="17" forecolor="#020138"/>
+				<textElement textAlignment="Justified">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[* BELUM TERMASUK TOL, PARKIR, BBM.]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
